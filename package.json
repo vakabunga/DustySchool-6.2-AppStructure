@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && cp -Ra ./src/. dist && coffee -c -t -o dist src",
+    "build": "rm -rf dist && cp -Ra ./src/. dist && coffee -c -t -o dist src && pug -P ./src/. -o dist",
     "lint": "eslint ./src && stylelint './src/**/*.css'",
     "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix",
     "start": "http-server ./dist",
@@ -32,6 +32,7 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.31.0",
     "http-server": "14.1.1",
+    "pug-cli": "1.0.0-alpha6",
     "stylelint": "16.20.0",
     "stylelint-order": "7.0.0",
     "stylelint-semantic-groups": "1.2.1"
